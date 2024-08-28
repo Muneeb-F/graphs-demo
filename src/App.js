@@ -11,7 +11,7 @@ import {
   ResponsiveContainer
 } from 'recharts';
 
-const rangeData = [
+const waterfallData = [
   {
     "feature": "Annual Client",
     "importance": [
@@ -71,21 +71,6 @@ const rangeData = [
   },
 ]
 
-
-
-const data = [
-  { 
-    name: "Annual Clients", 
-    value: 10 
-  },
-  { name: "Infraction Type", value: 16 },
-  { name: "Infraction Timeline", value: 17 },
-  { name: "Public Complaints", value: 17 },
-  { name: "Sentiment Analysis", value: 26 },
-  { name: "Inspection Results", value: 13 },
-  { name: "Total", value: 100 },
-];
-
 const stackedBarData = [
   {
     name: 'Flagged',
@@ -107,7 +92,7 @@ function App() {
     <div>
       <h1>Feature Importance (Waterfall Chart)</h1>
       <ResponsiveContainer width="80%" height={400}>
-        <BarChart width={700} height={250} data={rangeData} margin={{top: 20, right: 20, bottom: 20, left: 20}} >
+        <BarChart width={700} height={250} data={waterfallData} margin={{top: 20, right: 20, bottom: 20, left: 20}} >
           <XAxis dataKey="feature" />
           <YAxis />
           <Tooltip />
